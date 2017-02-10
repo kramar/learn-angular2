@@ -1,0 +1,5 @@
+<div (click)="clickHandler()">
+	Hello <span [textContent]="name"></span> World!
+</div>
+
+<my-task [taskNumber]="3" [taskLabel]="'My task'" (onRemove)="removeHandler()"></my-task>
