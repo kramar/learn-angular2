@@ -6,19 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var task_module_1 = require("./task/task.module");
-var AppModule = (function () {
-    function AppModule() {
+var task_component_1 = require("./task/task.component");
+var task_list_component_1 = require("./task-list/task-list.component");
+var common_1 = require("@angular/common");
+var forms_1 = require("@angular/forms");
+var TaskModule = (function () {
+    function TaskModule() {
     }
-    return AppModule;
+    return TaskModule;
 }());
-AppModule = __decorate([
+TaskModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, task_module_1.TaskModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [common_1.CommonModule, forms_1.ReactiveFormsModule],
+        declarations: [task_component_1.TaskComponent, task_list_component_1.TaskListComponent],
+        exports: [task_list_component_1.TaskListComponent]
     })
-], AppModule);
-exports.AppModule = AppModule;
+], TaskModule);
+exports.TaskModule = TaskModule;

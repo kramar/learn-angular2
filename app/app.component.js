@@ -9,12 +9,26 @@ var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
         this.name = 'Test';
+        this.taskItems = [
+            {
+                name: 'Task #1',
+                id: 1,
+            },
+            {
+                name: 'Task #2',
+                id: 2,
+            },
+            {
+                name: 'Task #3',
+                id: 3,
+            }
+        ];
         this.clickHandler = function () {
             console.log(this.name);
         };
     }
-    AppComponent.prototype.removeHandler = function () {
-        console.log(123123);
+    AppComponent.prototype.removeHandler = function (id) {
+        console.log(id);
     };
     return AppComponent;
 }());
@@ -26,5 +40,4 @@ AppComponent = __decorate([
         styles: ['div { color: red }']
     })
 ], AppComponent);
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = AppComponent;
+exports.AppComponent = AppComponent;

@@ -6,16 +6,29 @@ import {Component} from "@angular/core";
     templateUrl: 'app.component.html',
     styles: ['div { color: red }']
 })
-class AppComponent {
+export class AppComponent {
     name = 'Test';
+
+    taskItems:Array<Task> = [
+        {
+            name: 'Task #1',
+            id: 1,
+        },
+        {
+            name: 'Task #2',
+            id: 2,
+        },
+        {
+            name: 'Task #3',
+            id: 3,
+        }
+    ];
 
     clickHandler = function () {
         console.log(this.name);
     };
 
-    removeHandler() {
-        console.log(123123);
+    removeHandler(id:number) {
+        console.log(id);
     }
 }
-
-export default AppComponent;

@@ -6,32 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var TaskComponent = (function () {
-    function TaskComponent() {
-        this.onRemove = new core_1.EventEmitter();
+var TaskListComponent = (function () {
+    function TaskListComponent() {
     }
-    TaskComponent.prototype.remove = function () {
-        console.log(1);
-        this.onRemove.emit();
-    };
-    return TaskComponent;
+    return TaskListComponent;
 }());
 __decorate([
     core_1.Input()
-], TaskComponent.prototype, "taskNumber", void 0);
-__decorate([
-    core_1.Input()
-], TaskComponent.prototype, "taskLabel", void 0);
-__decorate([
-    core_1.Output()
-], TaskComponent.prototype, "onRemove", void 0);
-TaskComponent = __decorate([
+], TaskListComponent.prototype, "taskItems", void 0);
+TaskListComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-task',
-        templateUrl: 'task.component.html',
+        selector: 'my-task-list',
+        templateUrl: 'task-list.component.html',
         styles: ['div { color: green }']
     })
-], TaskComponent);
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = TaskComponent;
+], TaskListComponent);
+exports.TaskListComponent = TaskListComponent;

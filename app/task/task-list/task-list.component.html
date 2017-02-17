@@ -1,0 +1,8 @@
+<form>
+	<input type="button" value="Save Form State" (click)="saveFormState()">
+	<table class="table table-bordered">
+		<tr myTask *ngFor="let task of taskItems" [taskNumber]="task.id" [taskLabel]="task.name"
+			(onRemove)="removeHandler(task.id)">
+		</tr>
+	</table>
+</form>

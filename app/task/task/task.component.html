@@ -1,0 +1,11 @@
+<td [textContent]="taskNumber"></td>
+<td>
+	<form [formGroup]="form">
+		<input type="text" formControlName="label" />
+		<span>Status - {{form.status}}</span>
+		<span>Dirty - {{form.dirty}}</span>
+
+		<input type="button" value="Revert" (click)="revertForm()">
+	</form>
+</td>
+<td (click)="remove()">x</td>
